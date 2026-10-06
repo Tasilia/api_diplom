@@ -44,7 +44,7 @@ if __name__ == "__main__":
         print(file_info)
         file_info_name = f"{file_name}_info.json"
         with open(file_info_name, "w") as f:
-            f.write(json.dumps(file_info))
+            json.dump(file_info, f, ensure_ascii=False, indent=2)
         print(
             f"Инфомация о размере загруженного файла {file_name} записана в файл {file_info_name}"
         )
